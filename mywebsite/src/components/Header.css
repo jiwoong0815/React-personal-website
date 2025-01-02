@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #2c2c2c; /* Light gray */
+  color: #333; /* Dark gray for text */
+}
+
+.header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff; /* McGill red */
+}
+
+.header nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.header nav a {
+  color: #ffffff; /* Dark gray for readability */
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+  color: #d90429; /* McGill red on hover */
+}
+
+.header .hire-me {
+  background: none;
+  border: 1px solid #d90429; /* McGill red border */
+  color: #ffffff; /* McGill red text */
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.55rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.header .hire-me:hover {
+  background-color: #d90429; /* McGill red fill */
+  color: #fff; /* White text */
+}

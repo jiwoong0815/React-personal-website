@@ -1,0 +1,140 @@
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background-color: #121212; /* Match header background */
+  color: #fff;
+  height: 100vh; /* Full height of viewport */
+}
+
+/* Profile Section */
+.profile-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-section .profile-image {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-section .profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%; /* Circular image */
+}
+
+.profile-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff; /* Bright text */
+}
+
+.profile-section p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #b3b3b3; /* Softer gray */
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Circular background */
+  background-color: #242424; /* Dark gray background for icons */
+  text-decoration: none; /* Remove underline from links */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #d90429; /* McGill red for hover */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.social-links a svg {
+  color: #fff; /* Icon color */
+  font-size: 20px; /* Adjust icon size */
+}
+
+/* Content Section */
+.content-section {
+  flex: 2;
+  padding: 1rem 2rem;
+}
+
+.content-section .intro-text {
+  font-size: 1rem;
+  color: #b3b3b3; /* Softer gray */
+  margin-bottom: 1rem;
+}
+
+.content-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #fff; /* Bright white text */
+}
+
+.content-section .status {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #b3b3b3; /* Softer gray */
+}
+
+.content-section .status .status-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #32cd32; /* Green indicator */
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.cta-button {
+  background-color: #d90429; /* McGill red button */
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #a7031d; /* Darker red on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content-section {
+    padding: 1rem;
+  }
+
+  .profile-section {
+    margin-bottom: 2rem;
+  }
+}
