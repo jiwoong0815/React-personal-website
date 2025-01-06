@@ -28,7 +28,8 @@ const Hero = () => {
       <div className="content-section">
         <p className="intro-text">Hello There!</p>
         <h1>
-          I’m Jiwoong Choi, a student crafting exceptional user-centric designs.
+          My name is Jiwoong Choi! 
+          <br/>a Software Engineering Student in Mcgill university!
         </h1>
         <p className="status">
           <span className="status-indicator"></span> Available for internship opportunity
