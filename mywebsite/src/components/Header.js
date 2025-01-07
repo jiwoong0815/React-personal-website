@@ -10,7 +10,7 @@ const Header = () => {
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button className="hire-me">Hire Me</button>
+      {/* <button className="hire-me">Hire Me</button> */}
     </header>
   );
 };

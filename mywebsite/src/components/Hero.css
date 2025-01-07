@@ -1,22 +1,24 @@
 /* Hero Section */
 .hero {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: space-between; /* Space between profile and content */
+  align-items: center; /* Center horizontally */
+  padding: 2rem 0; /* Add padding around the sections */
   background-color: #121212; /* Match header background */
   color: #fff;
-  margin-top: 0;
-  height: 100vh; /* Full height of viewport */
+  height: 100vh; /* Full height of the viewport */
+  gap: 2rem; /* Space between sections */
 }
 
 /* Profile Section */
 .profile-section {
-  flex: 1;
+  flex: none; /* Prevent resizing */
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-top: 100px;
 }
 
 .profile-section .profile-image {
@@ -61,7 +63,7 @@
   height: 40px;
   border-radius: 50%; /* Circular background */
   background-color: #242424; /* Dark gray background for icons */
-  text-decoration: none; /* Remove underline from links */
+  text-decoration: none; /* Remove underline */
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -77,45 +79,40 @@
 
 /* Content Section */
 .content-section {
-  /* flex: 2; */
-  flex-shrink: 0;
-  flex-grow: 0;
-  width: 1200px; /* Fixed width */
-  height: 400px; /* Fixed height */
-  padding: 4rem 2rem;
-  /* border: 1px solid #d90429; */
-  border-radius: 70px;
+  flex: none;
+  position: relative;
+  width: 90%; /* Use a percentage for responsiveness */
+  max-width: 1100px; /* Set a maximum width */
+  height: auto; /* Let the height adjust based on content */
+  padding: 2rem;
+  border-radius: 20px;
   background-color: #181818;
-  max-width: 100%;
-  max-height: 100%;
   box-sizing: border-box;
-  /* display: flex; */
-  flex-direction: column;
-  justify-content: space-between;
-  
+  overflow: hidden; /* Prevent content overflow */
+  text-align: center; /* Center-align all text */
+  margin: 0 auto; /* Center the content-section horizontally */
 }
 
+/* Ensure the heading doesn't break */
+.content-section h1 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem); /* Responsive font size */
+  color: #fff;
+  margin: 0 auto; /* Center horizontally */
+}
 
 .content-section .intro-text {
   font-size: 1rem;
   color: #b3b3b3; /* Softer gray */
-  margin-bottom: 2rem;
-  text-align: left;
-}
-
-.content-section h1 {
-  font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  color: #fff; /* Bright white text */
 }
 
 .content-section .status {
-  display: flex;
-  align-items: center;
   font-size: 1rem;
-  margin-bottom: 1rem;
-  margin-top: 3.5rem;
   color: #b3b3b3; /* Softer gray */
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content-section .status .status-indicator {
@@ -135,6 +132,7 @@
   border-radius: 0.5rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 2rem;
 }
 
 .cta-button:hover {
@@ -144,15 +142,12 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero {
-    flex-direction: column;
-    text-align: center;
+    gap: 2rem; /* Maintain spacing between profile and content */
   }
 
   .content-section {
-    padding: 1rem;
-  }
-
-  .profile-section {
-    margin-bottom: 2rem;
+    width: 90%; /* Adjust width for smaller screens */
+    height: auto; /* Allow height to adjust automatically */
+    padding: 1.5rem; /* Adjust padding */
   }
 }
